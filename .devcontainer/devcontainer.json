@@ -1,0 +1,17 @@
+{
+  "name": "Alpine-based node",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        
+      },
+      "extensions": [
+
+      ]
+    }
+  },
+  "postCreateCommand": "ls"
+}
