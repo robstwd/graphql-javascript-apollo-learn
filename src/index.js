@@ -12,7 +12,6 @@ const resolvers = {
     }
   },
   Mutation: {
-
     post: (parent, args, context, info) => {
       const newLink = context.prisma.link.create({
         data: {
@@ -20,7 +19,8 @@ const resolvers = {
           description: args.description,
         },
       })
-    }
+      return newLink
+    },
   },  
 }
 
@@ -32,7 +32,7 @@ const server = new ApolloServer({
   ),
   resolvers,
   context: {
-    prisma
+    prisma,
   }
 })
 
